@@ -1,0 +1,7 @@
+.profile__cross {
+    width: 22;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 14px;
+    left: 64px;
+}
