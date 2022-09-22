@@ -1,0 +1,10 @@
+.popup__save-button {
+    max-width: 358px;
+    max-height: 50px;
+    background: #000000;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 48px auto 37px auto;
+}
