@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.profile__add-buttom:hover {
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 999px) {
     .profile__add-buttom {
       width: 100px;

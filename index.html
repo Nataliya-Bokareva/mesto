@@ -76,20 +76,21 @@
         </footer>
 
         <section class="popup">
-            <div class="popup__form">
-                <img src="./images/Close Icon.png" alt="кнопка закрытия окна" class="popup__close">
+            <form class="popup__form">
+                <img src="./images/Close-Icon.png" alt="кнопка закрытия окна" class="popup__close">
                 <h3 class="popup__title">Редактировать профиль</h3>
-                <input type="text" placeholder="Жак-Ив Кусто" class="popup__text">
-                <input type="text" placeholder="Исследователь океана" class="popup__text">
-                <div class="popup__save-button">
-                    <p class="popup__save">Сохранить</p>
-                </div>
-            </div>
+                <fieldset class="popup__edit-conteiner">
+                <input type="text" placeholder="Имя" class="popup__text popup__form_name">
+                <input type="text" placeholder="О себе" class="popup__text popup__form_job">
+                <button class="popup__save-button popup__save">
+                    Сохранить
+                </button>
+            </fieldset>
+            </form>
         </section>
     </div>
-    
+   
+    <script type="text/javascript" src="./scripts/index.js"></script>
 </body>
-
-<script type="text/javascript" src="./scripts/index.js"></script>
 
 </html>

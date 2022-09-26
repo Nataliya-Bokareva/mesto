@@ -2,3 +2,7 @@
     width: 22px;
     margin: 25px 15px 31px auto;
 }
+
+.element__heart:hover {
+    opacity: 0.6;
+}
