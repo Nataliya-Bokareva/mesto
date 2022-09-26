@@ -13,8 +13,8 @@ popupCloseButton.addEventListener('click', popupToggle);
 // Находим форму в DOM
 let formElement = document.querySelector('.popup__form'); 
 // Находим поля формы в DOM
-let nameInput = document.querySelector('.popup__form_name');
-let jobInput = document.querySelector('.popup__form_job');
+let nameInput = document.querySelector('.popup__form-name');
+let jobInput = document.querySelector('.popup__form-job');
 
 function formSubmitHandler (evt) {
     evt.preventDefault(); 
