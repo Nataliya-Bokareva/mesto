@@ -6,3 +6,17 @@
 .element__heart:hover {
     opacity: 0.6;
 }
+
+.element__like-button {
+    width: 22px;
+    height: 19px;
+    border: none;
+    background-image: url(../../../images/like.png);
+    background-repeat: no-repeat;
+    background-size: 22px 19px;
+    background-position: center;
+    padding: 0;
+    margin: 25px 15px 31px auto;
+    background-color: white;
+    cursor: pointer;
+}

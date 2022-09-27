@@ -17,54 +17,54 @@
             <section class="profile">
                 <div class="profile__avatar"></div>
                 <div class="profile__info">
-                    <h2 class="profile__name">Жак-Ив Кусто</h2>
-                    <div class="profile__edit profile__open-popup">                        
-                    </div>
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button type="button" class="profile__edit-button">                        
+                    </button>
                     <p class="profile__description">Исследователь океана</p>
                 </div>
-                <div class="profile__add-buttom"></div>
+                <button type="button" class="profile__add-button"></button>
             </section>
 
             <section class="elements">
                 <div class="element">
-                    <img src="./images/profile-karachaevsk.png" alt="" class="element__image">
+                    <img src="./images/profile-karachaevsk.png" alt="Карачаевск" class="element__image">
                     <div class="element__description">
-                        <h4 class="element__name">Карачаевск</h4>
+                        <h2 class="element__name">Карачаевск</h2>
+                        <button type="button" class="element__like-button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="./images/profile-elbrus.png" alt="Эльбрус" class="element__image">
+                    <div class="element__description">
+                        <h2 class="element__name">Гора Эльбрус</h2>
                         <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
                     </div>
                 </div>
                 <div class="element">
-                    <img src="./images/profile-elbrus.png" alt="" class="element__image">
+                    <img src="./images/profile-dombai.png" alt="Домбай" class="element__image">
                     <div class="element__description">
-                        <h4 class="element__name">Гора Эльбрус</h4>
+                        <h2 class="element__name">Домбай</h2>
                         <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
                     </div>
                 </div>
                 <div class="element">
-                    <img src="./images/profile-dombai.png" alt="" class="element__image">
+                    <img src="./images/profile-elbrus.png" alt="вид на Эльбрус" class="element__image">
                     <div class="element__description">
-                        <h4 class="element__name">Домбай</h4>
+                        <h2 class="element__name">Гора Эльбрус</h2>
                         <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
                     </div>
                 </div>
                 <div class="element">
-                    <img src="./images/profile-elbrus.png" alt="" class="element__image">
+                    <img src="./images/profile-dombai.png" alt="вид на Домбай" class="element__image">
                     <div class="element__description">
-                        <h4 class="element__name">Гора Эльбрус</h4>
+                        <h2 class="element__name">Домбай</h2>
                         <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
                     </div>
                 </div>
                 <div class="element">
-                    <img src="./images/profile-dombai.png" alt="" class="element__image">
+                    <img src="./images/profile-karachaevsk.png" alt="Карачаево-Черкессия" class="element__image">
                     <div class="element__description">
-                        <h4 class="element__name">Домбай</h4>
-                        <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/profile-karachaevsk.png" alt="" class="element__image">
-                    <div class="element__description">
-                        <h4 class="element__name">Карачаево-Черкессия</h4>
+                        <h2 class="element__name">Карачаево-Черкессия</h2>
                         <img src="./images/heart.svg" alt="кнопка лайка" class="element__heart">
                     </div>
                 </div>
@@ -76,13 +76,13 @@
         </footer>
 
         <section class="popup">
-            <form class="popup__form">
+            <form name="editForm" class="popup__form">
                 <img src="./images/Close-Icon.png" alt="кнопка закрытия окна" class="popup__close">
                 <h3 class="popup__title">Редактировать профиль</h3>
                 <fieldset class="popup__edit-conteiner">
-                <input type="text" placeholder="Имя" class="popup__text popup__form-name">
-                <input type="text" placeholder="О себе" class="popup__text popup__form-job">
-                <button class="popup__save-button popup__save">
+                <input type="text" placeholder="Имя" class="popup__text popup__text_name">
+                <input type="text" placeholder="О себе" class="popup__text popup__text_job">
+                <button type="submit" class="popup__save-button">
                     Сохранить
                 </button>
             </fieldset>
