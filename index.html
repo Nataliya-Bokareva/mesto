@@ -26,7 +26,7 @@
             </section>
 
             <section class="elements">
-                <div class="element">
+                <!--<div class="element">
                     <img src="./images/profile-karachaevsk.png" alt="Карачаевск" class="element__image">
                     <div class="element__description">
                         <h2 class="element__name">Карачаевск</h2>
@@ -67,7 +67,7 @@
                         <h2 class="element__name">Карачаево-Черкессия</h2>
                         <button type="button" class="element__like-button"></button>
                     </div>
-                </div>
+                </div>-->
             </section>
         </main>
 
@@ -88,8 +88,32 @@
             </fieldset>
             </form>
         </section>
+
+        <section class="popup-new-place">
+            <form name="editForm" class="popup-new-place__form">
+                <img src="./images/Close-Icon.png" alt="кнопка закрытия окна" class="popup-new-place__close">
+                <h3 class="popup-new-place__title">Новое место</h3>
+                <fieldset class="popup-new-place__edit-conteiner">
+                <input type="text" placeholder="Название" class="popup-new-place__text popup-new-place__text_type_name">
+                <input type="text" placeholder="Ссылка на картинку" class="popup-new-place__text popup-new-place__text_type_job">
+                <button type="submit" class="popup-new-place__save-button">
+                    Создать
+                </button>
+            </fieldset>
+            </form>
+        </section>
     </div>
-   
+
+    <template class="template">
+        <div class="element">
+            <img src="" alt="" class="element__image">
+            <div class="element__description">
+                <h2 class="element__name"></h2>
+                <button type="button" class="element__like-button"></button>
+            </div>
+        </div> 
+    </template>
+
     <script type="text/javascript" src="./scripts/index.js"></script>
 </body>
 

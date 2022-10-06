@@ -1,0 +1,31 @@
+.popup-new-place__save-button {
+    width: 358px;
+    height: 50px;
+    background: #000000;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 48px auto 37px auto;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+
+.popup-new-place__save-button:hover {
+    opacity: 0.8;
+  }
+  
+  @media screen and (max-width: 700px) {
+      .popup-new-place__save-button {
+        width: 238px;
+        margin: 45px 22px 25px 22px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+  }
