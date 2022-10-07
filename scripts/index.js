@@ -18,6 +18,7 @@ const elementsContainer = document.querySelector(".elements");
 
 
 
+
 const initialCards = [
     {
       name: 'Архыз',
@@ -45,16 +46,37 @@ const initialCards = [
     }
   ];
 
- function createElement () {
-    const newElement = template.content.cloneNode(true);
-    const elementName = newElement.querySelector(".element__name");
-    const elementImg = newElement.querySelector(".element__image");
-    elementName.textContent = name; 
-    elementImg.setAttribute('src', link);
+  const render = () => {
+    initialCards.forEach((initialCard) => {
+      const newEl = createEl(initialCard.name, initialCard.link);
+      elementsContainer.prepend(newEl);
+    });
+  }
 
-    return newElement;
-    elementsContainer.append(newElement);
- } 
+  const createEl = (name, link) => {
+    const newEl = template.content.cloneNode(true);
+    const newName = newEl.querySelector(".element__name");
+    const newImg = newEl.querySelector(".element__image");
+    newName.textContent = name;
+    newImg.src = link;
+    newImg.alt = name;
+    
+    return newEl;
+  };
+
+  render();
+
+ //function createElement (name, link) {
+    //const elTemplate = document.querySelector('.template').content;
+    //const newElement = elTemplate.querySelector('.element').cloneNode(true);
+    //newElement.querySelector('.element__image').src = initialCards.link;
+   // newElement.querySelector('.element__image').alt = initialCards.name;
+    //newElement.querySelector('.element__name').textContent = initialCards.name;
+    //elementsContainer.prepend(newElement);
+  //} 
+
+//createElement (initialCards);
+
 
 const popupToggle = function() {
     if (!popup.classList.contains('popup_opened')) { 
