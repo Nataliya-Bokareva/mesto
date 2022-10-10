@@ -1,0 +1,13 @@
+.element__trash-bin {
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.element__trash-bin:hover {
+    opacity: 0.6;
+}
