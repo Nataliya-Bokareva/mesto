@@ -18,6 +18,8 @@ const elementsContainer = document.querySelector(".elements");
 const placeNameInput = document.querySelector('.popup-new-place__text_type_name');
 const placeLinkInput = document.querySelector('.popup-new-place__text_type_link');
 const newFormElement = document.querySelector('.popup-new-place__form');
+const ImgPopup = document.querySelector('.popup-open-place');
+const ImgPopupCloseButton = document.querySelector('.popup-open-place__close');
 
 
 const initialCards = [
@@ -71,6 +73,8 @@ const initialCards = [
 
    const deleteButton = newEl.querySelector(".element__trash-bin");
    deleteButton.addEventListener("click", elDelete);
+   newImg.addEventListener("click", OpenImgPopup);
+   
 
     return newEl;
   };
@@ -87,6 +91,23 @@ const initialCards = [
   const elDelete = (evt) => {
     const currentEl = evt.target.closest('.element');
     currentEl.remove();
+  }
+
+  const OpenImgPopup = (evt) => {
+    OpenImgPopupToggle();
+    evt.preventDefault();
+    const ImgPopupImg = document.querySelector('.popup-open-place__img');
+    const ImgPopupName = document.querySelector('.popup-open-place__text');
+    const currentImg = evt.target.closest('.element__image');
+    const currentName = evt.target.closest('.element__name');
+    ImgPopupImg.src = currentImg.src;
+    ImgPopupImg.alt = currentImg.alt;
+    ImgPopupName.textContent = currentName.textContent;
+
+  }
+
+  const OpenImgPopupToggle = function() {
+    ImgPopup.classList.toggle('popup-open-place_opened'); 
   }
 
 const popupToggle = function() {
@@ -129,6 +150,7 @@ popupOpenButton.addEventListener('click', popupToggle);
 popupCloseButton.addEventListener('click', popupToggle);
 newpopupOpenButton.addEventListener('click', newpopupToggle);
 newpopupCloseButton.addEventListener('click', newpopupToggle);
+ImgPopupCloseButton.addEventListener('click', OpenImgPopupToggle);
 //newpopupSaveButton.addEventListener('click', AddElement);
 //likeButton.addEventListener('click', likeToggle);
 

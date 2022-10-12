@@ -2,5 +2,12 @@
     position: relative;
     max-width: 75vw;
     max-height: 75vh;
+    min-width: 433px;
     margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .popup-open-place__container {
+        min-width: 240px;
+    }
 }
