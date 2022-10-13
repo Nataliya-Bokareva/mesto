@@ -20,6 +20,8 @@ const placeLinkInput = document.querySelector('.popup-new-place__text_type_link'
 const newFormElement = document.querySelector('.popup-new-place__form');
 const ImgPopup = document.querySelector('.popup-open-place');
 const ImgPopupCloseButton = document.querySelector('.popup-open-place__close');
+const ImgPopupImg = document.querySelector('.popup-open-place__img');
+const ImgPopupName = document.querySelector('.popup-open-place__text');
 
 
 const initialCards = [
@@ -74,7 +76,6 @@ const initialCards = [
    const deleteButton = newEl.querySelector(".element__trash-bin");
    deleteButton.addEventListener("click", elDelete);
    newImg.addEventListener("click", OpenImgPopup);
-   
 
     return newEl;
   };
@@ -96,10 +97,9 @@ const initialCards = [
   const OpenImgPopup = (evt) => {
     OpenImgPopupToggle();
     evt.preventDefault();
-    const ImgPopupImg = document.querySelector('.popup-open-place__img');
-    const ImgPopupName = document.querySelector('.popup-open-place__text');
-    const currentImg = evt.target.closest('.element__image');
-    const currentName = evt.target.closest('.element__name');
+    const currentEl = evt.target.closest('.element');
+    const currentImg = currentEl.querySelector('.element__image');
+    const currentName = currentEl.querySelector('.element__name');
     ImgPopupImg.src = currentImg.src;
     ImgPopupImg.alt = currentImg.alt;
     ImgPopupName.textContent = currentName.textContent;
@@ -129,32 +129,12 @@ const newpopupToggle = function() {
     newpopup.classList.toggle('popup-new-place_opened'); 
 }
 
-//const likeButton = document.querySelector('.element__like-button');
-   // likeButton.addEventListener('click', like);
-//const like = (evt) => {
-  //const likeEl = evt.target.classList.toggle('element__like-button_active');
-//}
-
-//function addLike () {
-  //likeButton.addEventListener('click', function (evt) {
-  //evt.target.classList.toggle('element__like-button_active');
-//});
-//}
-
-
-//songElement.querySelector('.song__like').addEventListener('click', function (evt) {
-    //evt.target.classList.toggle('song__like_active');
- //});
 
 popupOpenButton.addEventListener('click', popupToggle);
 popupCloseButton.addEventListener('click', popupToggle);
 newpopupOpenButton.addEventListener('click', newpopupToggle);
 newpopupCloseButton.addEventListener('click', newpopupToggle);
 ImgPopupCloseButton.addEventListener('click', OpenImgPopupToggle);
-//newpopupSaveButton.addEventListener('click', AddElement);
-//likeButton.addEventListener('click', likeToggle);
-
 formElement.addEventListener('submit', formSubmitHandler);
-//newFormElement.addEventListener('submit', AddElement);
 
 render();
